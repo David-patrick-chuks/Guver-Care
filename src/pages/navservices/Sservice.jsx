@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { servoffsec } from '../../data/db';
-import { Link, useNavigate } from "react-router-dom";
 
 
-function Secondservice() {
+function Sservice() {
   const navigate = useNavigate();
-    const handleNextPage = (path) => {
-        navigate(path);
-      };
+  const handleNextPage = (path) => {
+    navigate(path);
+  };
   return (
-    <div className='py-14 px-[75px] w-full '  style={{ backgroundImage: `url("/pictures/Frame.jpg")`}}>
-        <p className='text-4xl font-bold border-b border-blue-500 pb-20'>Our Services</p>
-        <div className="flex mt-24 justify-between w-full">
+    <div className='py-14 px-[75px] w-full ' style={{ backgroundImage: `url("/pictures/Frame.jpg")` }}>
+      <p className='text-4xl font-bold border-b border-blue-500 pb-20'>Our Services</p>
+      <div className="flex mt-24 justify-between w-full">
         {servoffsec.map((serv, id) => (
           <div
             key={id}
@@ -30,4 +30,4 @@ function Secondservice() {
   )
 }
 
-export default Secondservice;
+export default Sservice;
