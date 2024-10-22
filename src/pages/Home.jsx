@@ -3,13 +3,14 @@ import { cardstas } from "../data/db";
 import Secondpage from "../component/homepage/Secondpage";
 
 import Keyfeatures from "../component/homepage/keyfeatures";
-import Steps from "../component/homepage/Steps";
+
 import Testimonial from "../component/homepage/Testimonial";
 
 
 import Questions from "../component/Questions";
 import Fsub from "../component/homepage/Fsub";
 import GetApp from "../component/homepage/GetApp";
+import Stepper from "../component/homepage/Stepper";
 
 
 
@@ -22,7 +23,7 @@ function Home() {
                 <Secondpage cardstas={cardstas} position="flex-row-reverse" />
             </div>
             <Keyfeatures position={"flex-row"} />
-            <Steps />
+            <Stepper />
             <Testimonial />
             <Questions />
             <GetApp />
