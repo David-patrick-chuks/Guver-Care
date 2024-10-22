@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Absoff from './absoff';
+
+import Abs from './Abs';
 import Fsub from './Fsub';
 import GetApp from './GetApp';
 
@@ -11,11 +12,11 @@ function AboutUs() {
         className=" w-full px-[75px]"
       >
         <Fsub path="aboutus" />
-       
+
       </div>
-     
-      <Absoff/>
-      
+
+      <Abs />
+
       <GetApp />
     </div>
   )
