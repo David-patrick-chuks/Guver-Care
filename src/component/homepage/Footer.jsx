@@ -1,12 +1,12 @@
 import React from "react";
+import { FaFacebookF } from "react-icons/fa";
+import { IoGlobeOutline } from "react-icons/io5";
 import {
+  RiInstagramFill,
   RiTwitterXLine,
   RiWhatsappFill,
-  RiInstagramFill,
 } from "react-icons/ri";
-import { FaFacebookF } from "react-icons/fa";
 import { footer } from "../../data/db";
-import { IoGlobeOutline } from "react-icons/io5";
 
 function Footer() {
   return (
@@ -27,40 +27,40 @@ function Footer() {
 
           <div className="lastfooter  mt-5 mb-5 flex lg:gap-[150px]">
             <ul className="flex  lg:mt-11">
-              <li class="list-none ">
+              <li className="list-none ">
                 <a
                   href="https://web.facebook.com/chfglobal"
-                  class="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
+                  className="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <FaFacebookF className="lasticon" />
                 </a>
               </li>
-              <li class="list-none mx-2">
+              <li className="list-none mx-2">
                 <a
                   href="https://twitter.com/dehmzzy"
-                  class="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
+                  className="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <RiTwitterXLine className="lasticon" />
                 </a>
               </li>
-              <li class="list-none mx-2">
+              <li className="list-none mx-2">
                 <a
                   href="https://wa.link/89vopc"
-                  class="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
+                  className="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <RiWhatsappFill className="lasticon" />
                 </a>
               </li>
-              <li class="list-none mx-2">
+              <li className="list-none mx-2">
                 <a
                   href="https://www.instagram.com/dehmzyy/"
-                  class="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
+                  className="lasticon text-nurse-300 text-lg leading-[50px] transition-colors duration-600 pt-1 hover:text-[rgb(37,32,32)]"
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { NavBarLinks } from "../../data/db";
-import { MdMenu } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
 
 function Navbar() {
 
@@ -67,7 +67,9 @@ function Navbar() {
           </button>
         </div>
         <div className="flex lg:hidden" onClick={toggleMenu}>
-          <MdMenu size={40} />
+         {
+          mobileNav ? ( <MdClose size={40} />) : ( <MdMenu size={40} />)
+         }
         </div>
       </nav>
       {

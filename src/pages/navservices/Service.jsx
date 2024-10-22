@@ -1,13 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import Firstsub from "../../component/homepage/firstsub";
-import bg from "/pictures/Frame.jpg";
+import Firstsub from "../../component/homepage/Firstsub";
+import Gettheapp from "../../component/homepage/Gettheapp";
+import Steps from "../../component/homepage/Steps";
 import Firstservice from "./Firstservice";
 import Secondservice from "./secondservice";
-import secbg from "/pictures/secbg.jpg";
-import Gettheapp from "../../component/homepage/gettheapp";
-import Steps from "../../component/homepage/steps";
 
 function Service() {
   return (

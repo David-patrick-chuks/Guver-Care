@@ -1,5 +1,4 @@
-import React from 'react';  
-import { FaUserAlt, FaRegAddressCard, FaCog } from 'react-icons/fa';  
+import React from 'react';
 import { creates } from '../../data/db'; // Make sure to import the creates data  
 
 function Create() {  

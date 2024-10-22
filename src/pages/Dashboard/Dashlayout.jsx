@@ -13,7 +13,8 @@ function Dashlayout() {
         <div>
           <Navdash />
         </div>
-        <main className="  h-full w-full">
+        <main className=
+        "  h-full w-full">
           <Outlet />
         </main>
       </div>
