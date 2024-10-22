@@ -1,10 +1,11 @@
 import React from "react";
 
-import Steps from "../../component/homepage/Steps";
+
 import Firstservice from "./Firstservice";
 import Secondservice from "./Secondservice";
 import Fsub from "../../component/homepage/Fsub";
 import GetApp from "../../component/homepage/GetApp";
+import Steps from "../../component/homepage/Steps";
 
 function Service() {
   return (
