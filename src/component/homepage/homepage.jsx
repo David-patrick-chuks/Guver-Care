@@ -12,6 +12,7 @@ import Keyfeatures from "./Keyfeatures";
 function Homepage() {
     return (
         <div>
+            
             <div className="bg-cover h-full w-full  bg-no-repeat px-5 lg:px-[75px]">
                 <Firstsub path="home" />
                 <Secondpage cardstas={cardstas} position="flex-row-reverse" />
