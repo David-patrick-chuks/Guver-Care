@@ -1,8 +1,8 @@
 import React from 'react';
-import Firstsub from "../../component/homepage/firstsub";
 
-import Gettheapp from "../../component/homepage/gettheapp";
 import Absoff from './absoff';
+import Fsub from './Fsub';
+import GetApp from './GetApp';
 
 function AboutUs() {
   return (
@@ -10,13 +10,13 @@ function AboutUs() {
       <div
         className=" w-full px-[75px]"
       >
-        <Firstsub path="aboutus" />
+        <Fsub path="aboutus" />
        
       </div>
      
       <Absoff/>
       
-      <Gettheapp />
+      <GetApp />
     </div>
   )
 }
