@@ -1,7 +1,9 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Footer from "../homepage/Footer";
+
 import Navbar from "../homepage/Navbar";
+
+import FooterComp from "../homepage/FooterComp";
 
 function HomeLayout() {
   
@@ -18,7 +20,7 @@ function HomeLayout() {
         <Outlet />
       </main>
       {/* Render Footer only if the current path is not in the noFooterPaths array */}  
-      {!hideLocation.includes(location.pathname) && <Footer />} 
+      {!hideLocation.includes(location.pathname) && <FooterComp />} 
     </div>
   );
 }

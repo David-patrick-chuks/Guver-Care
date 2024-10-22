@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Create from "./component/homepage/Create";
-import Homepage from "./component/homepage/Homepage";
+
 import Login from "./component/homepage/Login";
 import HomeLayout from "./component/layout/HomeLayout";
 import Service from "./pages/navservices/Service";
@@ -17,6 +17,7 @@ import Health from "./pages/Dashboard/Health";
 import Setting from "./pages/Dashboard/Setting";
 import General from "./pages/Dashboard/General";
 import Help from "./pages/Dashboard/Help";
+import Home from "./pages/Home";
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route  element={<HomeLayout />}>
-            <Route path="/" index element={<Homepage />} />
+            <Route path="/" index element={<Home />} />
             <Route path="service" element={<Service />} />
             <Route path="login" element={<Login />} />
             <Route path="create" element={<Create />} />
