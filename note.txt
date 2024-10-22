@@ -1,0 +1,134 @@
+   chuks 
+   hello
+   kala
+   <Modal isOpen={modalIsOpen} onRequestClose={resetForm}>
+        <div style={{ position: "relative" }}>
+          <h2>Book Appointment</h2>
+
+          <FaTimes
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              cursor: "pointer",
+            }}
+            onClick={resetForm}
+          />
+
+          <label>
+            Select Doctor:
+            <select
+              value={selectedDoctor ? selectedDoctor.id : ""}
+              onChange={(e) => {
+                const doctor = doctors.find(
+                  (doc) => doc.id === parseInt(e.target.value)
+                );
+                setSelectedDoctor(doctor);
+              }}
+            >
+              <option value="" disabled>
+                Select a doctor
+              </option>
+              {doctors.map((doctor) => (
+                <option key={doctor.id} value={doctor.id}>
+                  {doctor.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <br />
+
+          {selectedDoctor && (
+            <div
+              style={{
+                marginTop: "10px",
+                border: "1px solid #ccc",
+                padding: "10px",
+              }}
+            >
+              <h3>Doctor Details</h3>
+              <img
+                src={selectedDoctor.picture}
+                alt={selectedDoctor.name}
+                style={{ width: "50px", marginRight: "10px" }}
+              />
+              <p>
+                <strong>Name:</strong> {selectedDoctor.name}
+              </p>
+              <p>
+                <strong>Details:</strong> {selectedDoctor.details}
+              </p>
+            </div>
+          )}
+
+          <label>
+            Time:
+            <input
+              type="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Description:
+            <input
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </label>
+          <br />
+          <button onClick={handleSubmit}>Submit</button>
+          <button
+            onClick={resetForm}
+            style={{ backgroundColor: "blue", color: "white" }}
+          >
+            Make Payment
+          </button>
+        </div>
+      </Modal>
+
+      <Modal
+        isOpen={viewAllModalIsOpen}
+        onRequestClose={() => setViewAllModalIsOpen(false)}
+      >
+        <h2>All Appointments</h2>
+        <ul>
+          {appointments.map((appt, index) => (
+            <li key={index} style={{ marginBottom: "10px" }}>
+              <img
+                src={appt.doctor.picture}
+                alt={appt.doctor.name}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+              <strong>{appt.doctor.name}</strong> - {appt.time}
+              <button onClick={() => toggleDetails(index)}>
+                {visibleDetails[index] ? <FaArrowUp /> : <FaArrowDown />}
+              </button>
+              {visibleDetails[index] && (
+                <div
+                  style={{
+                    marginTop: "5px",
+                    border: "1px solid #ccc",
+                    padding: "10px",
+                  }}
+                >
+                  <p>
+                    <strong>Doctor Details:</strong> {appt.doctor.details}
+                  </p>
+                  <p>
+                    <strong>Description:</strong> {appt.description}
+                  </p>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+        <button
+          onClick={() => setViewAllModalIsOpen(false)}
+          style={{ backgroundColor: "red", color: "white" }}
+        >
+          Close
+        </button>
+      </Modal>
